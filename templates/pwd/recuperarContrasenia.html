@@ -1,0 +1,31 @@
+<div style="width: 70%; top: 20%; left: 15%; position: absolute;" class="datoLogin">
+    Introduzca su direcci&oacute;n de correo electr&oacute;nico y nombre de usuario registrados en el sistema:
+</div>
+<div style="position: absolute; top: 30%; left: 30%; width: 40%;">
+    <form name="formRecuperarContrasenia" action="../main/nuevaContrasenia.php" method="post">
+    <!--<form name="loginForm" action="" method="post" onSubmit="return validaFormaLogin(this);">-->
+            <table style="border-collapse: collapse;" cellpadding="4" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td class="datoLogin" align="right" width="50%">
+                            Nombre de Usuario:&nbsp; 
+                        </td>
+                        <td class="datoLogin" align="center">
+                            <input type="text" class="inputText" name="nombreUsuario" size="25" maxlength="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="datoLogin" align="right" width="50%">
+                            Correo Electr&oacute;nico:&nbsp; 
+                        </td>
+                        <td class="datoLogin" align="center">
+                            <input type="text" class="inputText" name="correoElectronico" size="25" maxlength="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="datoLogin" align="center" colspan="2">
+                            <input type="submit" value="Recuperar Contrase&ntilde;a">
+                        </td>
+                    </tr>
+            </table>
+    </form>
+</div>

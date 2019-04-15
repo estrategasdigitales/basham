@@ -1,0 +1,116 @@
+<div class="listasUsuarios" id="listasUsuarios">
+    <div id="listaUsuarios" style="outline: thin solid #C9C9D4; height: 100%;">
+        <table style="border-collapse: collapse; table-layout: fixed;" border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr style="height: 30px;">
+                <td style="outline: thin solid white;" class="titulo" align="center" width="100%">
+                    Usuario
+                </td>
+            </tr>
+        </table>
+        <div id="despliegueUsuarios" style="height: 94.5%; overflow: auto; overflow-x: hidden;">
+            <table style="border-collapse: collapse; table-layout: fixed;" border="0" cellspacing="0" cellpadding="1" width="100%">
+                <input type="hidden" id="numeroUsuarios" name="numeroUsuarios" value="{NUMERO_USUARIOS}">
+                <input type="hidden" id="usuarioSeleccionado" name="usuarioSeleccionado" value="">
+                <input type="hidden" id="numeroSeleccionUsuario" name="numeroSeleccionUsuario" value="">
+                <!-- BEGIN LISTA_USUARIOS -->
+                    <input type="hidden" id="idUsuarioLista_{NUMERO}" name="idUsuarioLista_{NUMERO}" value="{ID_USUARIO}">
+                    <tr style="outline: thin solid white; height: 10px;" valign="top">
+                        <td class="{CLASE_DATO}" align="left" width="100%" id="nombreUsuarioTd_{NUMERO}">
+                            <a id="nombreUsuarioHref_{NUMERO}" href="javascript:;" onclick="seleccionaUsuario('{ID_USUARIO}','{NUMERO}')" class="dato">
+                                <div id="nombreUsuarioLista_{NUMERO}" style="width: 100%; height: 100%;" class="{CLASE_DATO}">
+                                    {NOMBRE_USUARIO_LISTA}
+                                </div>
+                            </a>
+                        </td>
+                    </tr>
+                <!-- END LISTA_USUARIOS -->
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="panelPrincipalUsuarios" id="panelPrincipalUsuarios">
+    <fieldset style="height: 100%;" id="fieldsetInfoUsuario" disabled="disabled">
+        <legend class="datoPrincipal">Usuario</legend>
+        <div class="divDatosUsuario">
+            <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="8" width="100%" border="0">
+                <tr>
+                    <td class="datoPrincipal" align="center" id="tdNombreUsuario">
+                        <input type="text" id="nombreUsuario" name="nombreUsuario" value="{NOMBRE_USUARIO}" style="width: 90%;">
+                    </td>
+                    <td class="datoPrincipal" align="center" id="tdApPaternoUsuario">
+                        <input type="text" id="apPaternoUsuario" name="apPaternoUsuario" value="{AP_PATERNO_USUARIO}" style="width: 90%;">
+                    </td>
+                    <td class="datoPrincipal" align="center" id="tdApMaternoUsuario">
+                        <input type="text" id="apMaternoUsuario" name="apMaternoUsuario" value="{AP_MATERNO_USUARIO}" style="width: 90%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="datoPrincipal" align="center">
+                        Nombre
+                    </td>
+                    <td class="datoPrincipal" align="center">
+                        Apellido Paterno
+                    </td>
+                    <td class="datoPrincipal" align="center">
+                        Apellido Materno
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="position: absolute; left: 2.8%; width: 94.2%; height: 4%; top: 19%;">
+            <hr color="#ED631F" size="2">
+        </div>
+        <div class="divLoginUsuario">
+            <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="8" width="100%" border="0">
+                <tr>
+                    <td class="datoPrincipal" align="center" id="tdEmailUsuario">
+                        <input type="text" id="emailUsuario" name="emailUsuario" value="{EMAIL_USUARIO}" style="width: 90%;">
+                    </td>
+                    <td class="datoPrincipal" align="center" id="tdLoginUsuario">
+                        <input type="text" id="loginUsuario" name="loginUsuario" value="{LOGIN_USUARIO}" style="width: 90%;">
+                    </td>
+                    <td class="datoPrincipal" align="center">
+                        <input type="password" id="passwordUsuario" name="passwordUsuario" value="" style="width: 90%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="datoPrincipal" align="center">
+                        Correo Electr&oacute;nico
+                    </td>
+                    <td class="datoPrincipal" align="center">
+                        Nombre de Usuario
+                    </td>
+                    <td class="datoPrincipal" align="center">
+                        Contrase&ntilde;a
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="position: absolute; left: 2.8%; width: 94.2%; height: 4%; top: 38%;">
+            <hr color="#ED631F" size="2">
+        </div>
+        <div class="divTipoUsuario">
+            <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="8" width="33.3%" border="0">
+                <tr>
+                    <td class="datoPrincipal" align="center" id="tdTipoUsuario">
+                        <select id="tipoUsuarioSel" name="tipoUsuarioSel" style="width: 90%;">
+                            <option value="0" {SELECTED_0}>--------</option>
+                            <option value="1" {SELECTED_1}>Administrador</option>
+                            <option value="2" {SELECTED_2}>Evaluador</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="datoPrincipal" align="center">
+                        Tipo de Usuario
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </fieldset>
+</div>

@@ -1,0 +1,63 @@
+<html>  
+<head>  
+	 <meta charset="utf-8">
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/plain; charset=utf-8" />
+		<!--<link rel="shortcut icon" href="../img/iconos/favicon.ico" type="image/x-icon" />-->
+		
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		
+		<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+		<script type="text/javascript">
+
+			var $j = $.noConflict();
+			
+		</script>
+		
+		<link rel="stylesheet" type="text/css" media="All" href="../templates/css/style.css"/>
+		<link rel="stylesheet" type="text/css" media="All" href="../templates/css/reveal.css"/>
+		<link rel="stylesheet" type="text/css" media="All" href="../templates/css/menu.css" />
+		<script src="../templates/js/scripts.js"></script>
+		<script type="text/javascript" src="../templates/js/jquery.reveal.js"></script>
+		
+		<title>BASHAM Abogados</title>
+		<input type="hidden" id="refreshed" value="no">
+        <script language="JavaScript">
+            var needToConfirm = false;
+          
+            window.onbeforeunload = confirmExit;
+            function confirmExit()
+            {
+                if (needToConfirm)
+                    {
+                        return "\u00bfEst\u00e1 seguro de querer cerrar esta ventana? La La informaci\u00f3n no ha sido guardada todav\u00eda.";
+                    }
+            }
+        </script>
+</head>  
+<body>  
+	  <div class="wrapPopupAbogados layoutPopupAbogados">
+		 <input type="hidden" id="token" name="token" value="{TOKEN_MAIN}">
+		 <div class="{CLASE_MENU}">
+			 {MENU}
+		 </div>
+		 <div class="{CLASE_CONTENIDO}" id="{ID_CONTENIDO}" >
+			<table style="table-layout: fixed;" width="100%" border="0">
+				<tr>
+					<td width="3%">
+						&nbsp;
+					</td>
+					<td width="94%">
+						{CONTENIDO}
+					</td>
+					<td width="3%">
+						&nbsp;
+					</td>
+				</tr>
+			</table>
+		 </div>
+		<div class="loader" id="loaderContent"></div>
+	  </div>     
+</body>  
+</html>  

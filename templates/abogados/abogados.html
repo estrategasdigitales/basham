@@ -1,0 +1,183 @@
+<div id="principal">
+    <input type="hidden" id="idUsuario" name="idUsuario" value="{ID_USUARIO_PRINCIPAL}">
+    <div class="abogadosEnlistar">
+        <fieldset class="datoPrincipal" align="left" style="height: 66%;" id="fieldsetBusquedaAbogados">
+            <legend>
+                B&uacute;squeda de Abogados
+            </legend>
+            <table style="border-collapse: collapse; position: absolute; top: 35%; left: -1%;" cellpadding="2" cellspacing="0" border="0" width="100%">
+                <tr>
+                    <td class="datoPrincipal" width="10%" align="right" nowrap>
+                        Nombre:
+                    </td>
+                    <td class="datoPrincipal" width="18%" nowrap colspan="2">
+                        <input style="width: 95%" type="text" class="inputText" name="busquedaNombreAbogado" id="busquedaNombreAbogado" value="">
+                    </td>
+                    <td class="datoPrincipal" width="10%" align="right" nowrap>
+                        Apellido Paterno: 
+                    </td>
+                    <td class="datoPrincipal" width="18%" nowrap>
+                        <input style="width: 95%" type="text" class="inputText" name="busquedaApellidoPaternoAbogado" id="busquedaApellidoPaternoAbogado" value="">
+                    </td>
+                    <td class="datoPrincipal" width="10%" align="right" nowrap>
+                        Apellido Materno: 
+                    </td>
+                    <td class="datoPrincipal" width="18%" nowrap id="tdAbogadoSeleccionado">
+                        <input style="width: 100%" type="text" class="inputText" name="busquedaApellidoMaternoAbogado" id="busquedaApellidoMaternoAbogado" value="">
+                    </td>
+                    <td class="datoPrincipal" width="16%" align="right" nowrap>
+                        <input type="button" value="Buscar Abogados" id="botonBuscarAbogados" onclick="buscarAbogadosLista()">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+    <div id="infoCompletaAbogados">
+        <div class="listasAbogados" id="listasAbogados">
+            <div id="listaAbogados" style="outline: thin solid #C9C9D4; height: 100%;">
+                <table style="border-collapse: collapse; table-layout: fixed;" border="0" cellspacing="0" cellpadding="0" width="100%">
+                    <tr style="height: 30px;">
+                        <td style="outline: thin solid white;" class="titulo" align="center" width="100%">
+                            Abogado
+                        </td>
+                    </tr>
+                </table>
+                <div id="despliegueAbogados" style="height: 94.5%; overflow: auto; overflow-x: hidden;">
+                    <table style="border-collapse: collapse; table-layout: fixed;" border="0" cellspacing="0" cellpadding="1" width="100%">
+                        <input type="hidden" id="numeroAbogados" name="numeroAbogados" value="{NUMERO_ABOGADOS}">
+                        <input type="hidden" id="abogadoSeleccionado" name="abogadoSeleccionado" value="">
+                        <input type="hidden" id="numeroSeleccionAbogado" name="numeroSeleccionAbogado" value="">
+                        <!-- BEGIN LISTA_ABOGADOS -->
+                            <input type="hidden" id="idAbogadoLista_{NUMERO}" name="idAbogadoLista_{NUMERO}" value="{ID_ABOGADO}">
+                            <tr style="outline: thin solid white; height: 10px;" valign="top">
+                                <td class="{CLASE_DATO}" align="left" width="100%" id="nombreAbogadoTd_{NUMERO}">
+                                    <a id="nombreAbogadoHref_{NUMERO}" href="javascript:;" onclick="seleccionaAbogadoLista('{ID_ABOGADO}','{NUMERO}')" class="dato">
+                                        <div id="nombreAbogadoLista_{NUMERO}" style="width: 100%; height: 100%;" class="{CLASE_DATO}">
+                                            {NOMBRE_ABOGADO_LISTA}
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        <!-- END LISTA_ABOGADOS -->
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="panelPrincipalAbogados" id="panelPrincipalAbogados">
+            <input type="hidden" id="idAbogadoLista" name="idAbogadoLista" value="0">
+            <fieldset style="height: 100%;" id="fieldsetInfoAbogado" disabled="disabled">
+                <legend class="datoPrincipal">Abogado</legend>
+                <div class="divDatosAbogado">
+                    <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="8" width="33%" border="0">
+                        <tr>
+                            <td class="datoPrincipal" align="center" width="100%" id="tdClave">
+                                <input type="text" id="claveIdentificacion" name="claveIdentificacion" value="{CLAVE_IDENTIFICACION}" style="width: 90%;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="datoPrincipal" align="center">
+                                Clave de identificaci&oacute;n
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="8" width="100%" border="0">
+                        <tr>
+                            <td class="datoPrincipal" align="center" id="tdNombreAbogado">
+                                <input type="text" id="nombreAbogado" name="nombreAbogado" value="{NOMBRE_ABOGADO}" style="width: 90%;">
+                            </td>
+                            <td class="datoPrincipal" align="center" id="tdApPaternoAbogado">
+                                <input type="text" id="apPaternoAbogado" name="apPaternoAbogado" value="{AP_PATERNO_ABOGADO}" style="width: 90%;">
+                            </td>
+                            <td class="datoPrincipal" align="center" id="tdApMaternoAbogado">
+                                <input type="text" id="apMaternoAbogado" name="apMaternoAbogado" value="{AP_MATERNO_ABOGADO}" style="width: 90%;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="datoPrincipal" align="center">
+                                Nombre
+                            </td>
+                            <td class="datoPrincipal" align="center">
+                                Apellido Paterno
+                            </td>
+                            <td class="datoPrincipal" align="center">
+                                Apellido Materno
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="position: absolute; left: 2.8%; width: 94.2%; height: 4%; top: 34%;">
+                    <hr color="#ED631F" size="2">
+                </div>
+                <div class="divNivelAbogado">
+                    <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="8" width="100%" border="0">
+                        <tr>
+                            <td class="datoPrincipal" align="center" width="50%" id="tdNivel">
+                                <select id="nivelSel" name="nivelSel" style="width: 70%;">
+                                    {NIVELES_SEL}
+                                </select>
+                            </td>
+                            <td class="datoPrincipal" align="center" width="50%" id="tdPractica">
+                                <select id="practicaSel" name="practicaSel" style="width: 70%;">
+                                    {PRACTICAS_SEL}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="datoPrincipal" align="center">
+                                Nivel
+                            </td>
+                            <td class="datoPrincipal" align="center">
+                                Pr&aacute;ctica
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="position: absolute; left: 2.8%; width: 94.2%; height: 4%; top: 53%;">
+                    <hr color="#ED631F" size="2">
+                </div>
+                <div class="divHorasAbogado">
+                    <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="8" width="100%" border="0">
+                        <tr>
+                            <td class="datoPrincipal" align="center" width="50%" id="tdHorasCargadas">
+                                <input type="text" id="horasCargadas" name="horasCargadas" value="{HORAS_CARGADAS}" style="width: 40%;">
+                            </td>
+                            <td class="datoPrincipal" align="center" width="50%">
+                                <input type="text" id="horasFacturadas" name="horasFacturadas" value="{HORAS_FACTURADAS}" style="width: 40%;" disabled="disabled">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="datoPrincipal" align="center">
+                                Horas Cargadas
+                            </td>
+                            <td class="datoPrincipal" align="center">
+                                Horas Facturadas
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="position: absolute; left: 2.8%; width: 94.2%; height: 4%; top: 72%;">
+                    <hr color="#ED631F" size="2">
+                </div>
+                <div class="divSueldoAbogado">
+                    <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="8" width="50%" border="0" id="tdSueldo">
+                        <tr>
+                            <td class="datoPrincipal" align="center">
+                                <input type="text" id="sueldo" name="sueldo" value="{SUELDO}" style="width: 70%;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="datoPrincipal" align="center">
+                                Sueldo
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </fieldset>
+        </div>                                 
+    </div>
+</div>

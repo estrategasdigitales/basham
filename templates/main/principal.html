@@ -1,0 +1,145 @@
+<input type="hidden" id="idUsuario" name="idUsuario" value="{ID_USUARIO}">
+<input type="hidden" id="tipoUsuario" name="tipoUsuario" value="{TIPO_USUARIO}">
+<div class="busquedaAbogados">
+    <fieldset class="datoPrincipal" style="height: 110px;" id="infoContactoNuevo">
+        <legend style="text-align: left !important;">B&uacute;squeda de Abogados</legend>
+        <form>
+            <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="1" width="100%" border="0">
+                <tr>
+                    <td class="datoPrincipal" align="center" width="20%">
+                        <input type="text" id="apellidoPaternoBusquedaAbogados" name="apellidoPaternoBusquedaAbogados" value="" style="width: 95%;">
+                    </td>
+                    <td class="datoPrincipal" align="center">
+                        <input type="text" id="apellidoMaternoBusquedaAbogados" name="apellidoMaternoBusquedaAbogados" value="" style="width: 95%;">
+                    </td>
+                    <td class="datoPrincipal" align="center">
+                        <input type="text" id="nombreBusquedaAbogados" name="nombreBusquedaAbogados" value="" style="width: 95%;">
+                    </td>
+                    <td class="datoPrincipal" align="center">
+                        <select id="practicaBusquedaAbogados" name="practicaBusquedaAbogados" style="width: 95%;">
+                            {PRACTICAS_SEL}
+                        </select>
+                    </td>
+                    <td class="datoPrincipal" align="center">
+                        <select id="nivelBusquedaAbogados" name="nivelBusquedaAbogados" style="width: 95%;">
+                            {NIVELES_SEL}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="datoPrincipal" align="center">
+                        Apellido Paterno
+                    </td>
+                    <td class="datoPrincipal" align="center">
+                        Apellido Materno
+                    </td>
+                    <td class="datoPrincipal" align="center">
+                        Nombre(s)
+                    </td>
+                    <td class="datoPrincipal" align="center">
+                        Pr&aacute;ctica
+                    </td>
+                    <td class="datoPrincipal" align="center">
+                        Nivel
+                    </td>
+                </tr>
+                <tr valign="middle">
+                    <td class="datoPrincipal" align="center" colspan="5">
+                        <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="1" width="100%" border="0">
+                            <tr valign="middle">
+                                <td class="datoPrincipal" align="center" width="33%">
+                                    <button type="button" style="width: 60%;" onclick="buscarAbogados('uno')">
+                                        Buscar
+                                    </button>
+                                </td>
+                                <td class="datoPrincipal" align="center" width="34%">
+                                    <button type="button" style="width: 60%;" onclick="buscarAbogados('todos')">
+                                        Todos los Abogados
+                                    </button>
+                                </td>
+                                <td class="datoPrincipal" align="center" width="33%">
+                                    <input type="reset" style="width: 60%;" value="Limpiar Campos">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</div>
+<div class="divResultadoBusquedaAbogados">
+    <div id="listaAbogados" style="outline: thin solid #C9C9C9; height: 100%;">
+        <table style="border-collapse: collapse; table-layout: fixed;" border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr style="height: 20px;">
+                <td style="outline: thin solid white;" class="titulo" align="center" width="20%">
+                    Nombre
+                </td>
+                <td style="outline: thin solid white;" class="titulo" align="center" width="20%">
+                    Apellido Paterno
+                </td>
+                <td style="outline: thin solid white;" class="titulo" align="center" width="20%">
+                    Apellido Materno
+                </td>
+                <td style="outline: thin solid white;" class="titulo" align="center" width="20%">
+                    Nivel
+                </td>
+                <td style="outline: thin solid white;" class="titulo" align="center" width="20%">
+                    Practica
+                </td>
+            </tr>
+        </table>
+        <div id="despliegueAbogados" style="height: 91.5%; overflow: auto; overflow-x: hidden; overflow-y: scroll;">
+            <table style="border-collapse: collapse; table-layout: fixed;" border="0" cellspacing="0" cellpadding="1" width="100%">
+                <input type="hidden" id="numeroAbogados" name="numeroAbogados" value="{NUMERO_ABOGADOS}">
+                <input type="hidden" id="abogadoSeleccionado" name="abogadoSeleccionado" value="">
+                <input type="hidden" id="numeroSeleccionAbogado" name="numeroSeleccionAbogado" value="">
+                <!-- BEGIN LISTA_ABOGADOS -->
+                    <input type="hidden" id="idAbogado_{NUMERO}" name="idAbogado_{NUMERO}" value="{ID_ABOGADO}">
+                    <tr style="outline: thin solid white; height: 10px;" valign="top">
+                        <td class="{CLASE_DATO}" align="left" width="20%" id="nombreAbogadoTd_{NUMERO}">
+                            <a id="nombreAbogadoHref_{NUMERO}" href="javascript:;" onclick="seleccionaAbogadoLista('{ID_ABOGADO}','{NUMERO}')" class="dato">
+                                <div id="nombreAbogadoLista_{NUMERO}" style="width: 100%; height: 100%;" class="{CLASE_DATO}">
+                                    {NOMBRE_ABOGADO_LISTA}
+                                </div>
+                            </a>
+                        </td>
+                        <td class="{CLASE_DATO}" align="left" width="20%" id="apPaternoAbogadoTd_{NUMERO}">
+                            <a id="apPaternoAbogadoHref_{NUMERO}" href="javascript:;" onclick="seleccionaAbogadoLista('{ID_ABOGADO}','{NUMERO}')" class="dato">
+                                <div id="apPaternoAbogadoLista_{NUMERO}" style="width: 100%; height: 100%;" class="{CLASE_DATO}">
+                                    {AP_PATERNO_ABOGADO_LISTA}
+                                </div>
+                            </a>
+                        </td>
+                        <td class="{CLASE_DATO}" align="left" width="20%" id="apMaternoAbogadoTd_{NUMERO}">
+                            <a id="apMaternoAbogadoHref_{NUMERO}" href="javascript:;" onclick="seleccionaAbogadoLista('{ID_ABOGADO}','{NUMERO}')" class="dato">
+                                <div id="apMaternoAbogadoLista_{NUMERO}" style="width: 100%; height: 100%;" class="{CLASE_DATO}">
+                                    {AP_MATERNO_ABOGADO_LISTA}
+                                </div>
+                            </a>
+                        </td>
+                        <td class="{CLASE_DATO}" align="left" width="20%" id="nivelAbogadoTd_{NUMERO}">
+                            <a id="nivelAbogadoHref_{NUMERO}" href="javascript:;" onclick="seleccionaAbogadoLista('{ID_ABOGADO}','{NUMERO}')" class="dato">
+                                <div id="nivelAbogadoLista_{NUMERO}" style="width: 100%; height: 100%;" class="{CLASE_DATO}">
+                                    {NIVEL_ABOGADO_LISTA}
+                                </div>
+                            </a>
+                        </td>
+                        <td class="{CLASE_DATO}" align="left" width="20%" id="practicaAbogadoTd_{NUMERO}">
+                            <a id="practicaAbogadoHref_{NUMERO}" href="javascript:;" onclick="seleccionaAbogadoLista('{ID_ABOGADO}','{NUMERO}')" class="dato">
+                                <div id="practicaAbogadoLista_{NUMERO}" style="width: 100%; height: 100%;" class="{CLASE_DATO}">
+                                    {PRACTICA_ABOGADO_LISTA}
+                                </div>
+                            </a>
+                        </td>
+                    </tr>
+                <!-- END LISTA_ABOGADOS -->
+                <tr>
+                    <td colspan="2">
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

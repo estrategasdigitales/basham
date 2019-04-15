@@ -1,0 +1,44 @@
+<ul id="menu" style="width: 95%; margin: 1px;">
+    
+    <li {STYLE_EVALUACIONES}><a href="#" class="drop">Evaluaciones</a><!-- Begin 4 columns Item -->
+    
+        <!--<div class="dropdown_4columns">--><!-- Begin 4 columns container -->
+        <div class="dropdown_1column" style="width: 250px;"><!-- Begin 4 columns container -->
+            
+            <div class="col_1">
+            
+                <ul>
+                    <li><a id="menuIniciarEvaluacion" class="hrefDisabled" style="width: 230px;">- Iniciar Evaluaci&oacute;n...</a></li>
+                    <li><a id="menuReporteEvaluacion" class="hrefDisabled" style="width: 230px;">- Generar Reporte de Evaluaci&oacute;n...</a></li>
+                </ul>   
+                 
+            </div>
+            
+        </div><!-- End 4 columns container -->
+    
+    </li><!-- End 4 columns Item -->
+    
+    <li {STYLE_ADMINISTRADOR}><a href="#" class="drop">Administrador</a><!-- Begin 4 columns Item -->
+    
+        <!--<div class="dropdown_4columns">--><!-- Begin 4 columns container -->
+        <div class="dropdown_1column" style="width: 250px;"><!-- Begin 4 columns container -->
+            
+            <div class="col_1">
+            
+                <ul>
+                    <li><a id="menuVerUsuarios" href="javascript:;" onclick="verUsuarios()" style="width: 230px;">- Usuarios...</a></li>
+                    <li><a id="menuVerAbodagos" href="javascript:;" onclick="verAbogados()" style="width: 230px; border-bottom: 1px solid;">- Abogados...</a></li>
+                    <li><a id="menuCargarHorasAbogado" class="hrefDisabled" style="width: 230px;">- Cargar Horas a Abogado...</a></li>
+                </ul>   
+                 
+            </div>
+            
+        </div><!-- End 4 columns container -->
+    
+    </li><!-- End 4 columns Item -->
+    
+    <li class="menu_right">
+        <a href="javascript:;" onclick="salir('{TOKEN}')">Salir</a>
+    </li>
+
+</ul>

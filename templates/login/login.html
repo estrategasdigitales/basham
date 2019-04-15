@@ -1,0 +1,35 @@
+	<div class="login">
+		<form name="loginForm" action="../verifica.php" method="post" onSubmit="return validaFormaLogin(this);">
+		<!--<form name="loginForm" action="" method="post" onSubmit="return validaFormaLogin(this);">-->
+			<table class="texto_cajaLogin" border="0" width="100%">
+				<tr>
+					<td class="datoLogin" align="right">
+						Usuario: 
+					</td>
+					<td align="left">
+						<input type="text" id="usuario" name="usuario" maxlength="50" class="inputTextLogin">
+						<script>document.getElementById('usuario').focus()</script>
+					</td>
+				</tr>
+				<tr>
+					<td class="datoLogin" align="right">
+						Contrase&ntilde;a:
+					</td>
+					<td align="left">
+						<input type="password" name="passwd" maxlength="15" class="inputTextLogin">
+					</td>
+				</tr>
+                                <tr>
+					<td colspan="2" align="center">
+						<a href="../main/recuperarContrasenia.php"  class="datoLogin">Recuperar contrase&ntilde;a </a>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<!--<input type="image" src="../img/botones/botonEntrar.png" border="0">-->
+						<input type="submit" value="Entrar">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>

@@ -1,0 +1,109 @@
+<input type="hidden" id="idAbogadoLista" name="idAbogadoLista" value="0">
+            <fieldset style="height: 100%;" id="fieldsetInfoAbogado" disabled="disabled">
+                <legend class="datoPrincipal">Abogado</legend>
+                <div class="divDatosAbogado">
+                    <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="8" width="33%" border="0">
+                        <tr>
+                            <td class="datoPrincipal" align="center" width="100%" id="tdClave">
+                                <input type="text" id="claveIdentificacion" name="claveIdentificacion" value="{CLAVE_IDENTIFICACION}" style="width: 90%;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="datoPrincipal" align="center">
+                                Clave de identificaci&oacute;n
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="8" width="100%" border="0">
+                        <tr>
+                            <td class="datoPrincipal" align="center" id="tdNombreAbogado">
+                                <input type="text" id="nombreAbogado" name="nombreAbogado" value="{NOMBRE_ABOGADO}" style="width: 90%;">
+                            </td>
+                            <td class="datoPrincipal" align="center" id="tdApPaternoAbogado">
+                                <input type="text" id="apPaternoAbogado" name="apPaternoAbogado" value="{AP_PATERNO_ABOGADO}" style="width: 90%;">
+                            </td>
+                            <td class="datoPrincipal" align="center" id="tdApMaternoAbogado">
+                                <input type="text" id="apMaternoAbogado" name="apMaternoAbogado" value="{AP_MATERNO_ABOGADO}" style="width: 90%;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="datoPrincipal" align="center">
+                                Nombre
+                            </td>
+                            <td class="datoPrincipal" align="center">
+                                Apellido Paterno
+                            </td>
+                            <td class="datoPrincipal" align="center">
+                                Apellido Materno
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="position: absolute; left: 2.8%; width: 94.2%; height: 4%; top: 34%;">
+                    <hr color="#ED631F" size="2">
+                </div>
+                <div class="divNivelAbogado">
+                    <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="8" width="100%" border="0">
+                        <tr>
+                            <td class="datoPrincipal" align="center" width="50%" id="tdNivel">
+                                <select id="nivelSel" name="nivelSel" style="width: 70%;">
+                                    {NIVELES_SEL}
+                                </select>
+                            </td>
+                            <td class="datoPrincipal" align="center" width="50%" id="tdPractica">
+                                <select id="practicaSel" name="practicaSel" style="width: 70%;">
+                                    {PRACTICAS_SEL}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="datoPrincipal" align="center">
+                                Nivel
+                            </td>
+                            <td class="datoPrincipal" align="center">
+                                Pr&aacute;ctica
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="position: absolute; left: 2.8%; width: 94.2%; height: 4%; top: 53%;">
+                    <hr color="#ED631F" size="2">
+                </div>
+                <div class="divHorasAbogado">
+                    <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="8" width="100%" border="0">
+                        <tr>
+                            <td class="datoPrincipal" align="center" width="50%" id="tdHorasCargadas">
+                                <input type="text" id="horasCargadas" name="horasCargadas" value="{HORAS_CARGADAS}" style="width: 40%;">
+                            </td>
+                            <td class="datoPrincipal" align="center" width="50%">
+                                <input type="text" id="horasFacturadas" name="horasFacturadas" value="{HORAS_FACTURADAS}" style="width: 40%;" disabled="disabled">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="datoPrincipal" align="center">
+                                Horas Cargadas
+                            </td>
+                            <td class="datoPrincipal" align="center">
+                                Horas Facturadas
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="position: absolute; left: 2.8%; width: 94.2%; height: 4%; top: 72%;">
+                    <hr color="#ED631F" size="2">
+                </div>
+                <div class="divSueldoAbogado">
+                    <table class="datoPrincipal" style="border-collapse: collapse;" cellspacing="0" cellpadding="8" width="50%" border="0" id="tdSueldo">
+                        <tr>
+                            <td class="datoPrincipal" align="center">
+                                <input type="text" id="sueldo" name="sueldo" value="{SUELDO}" style="width: 70%;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="datoPrincipal" align="center">
+                                Sueldo
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </fieldset>

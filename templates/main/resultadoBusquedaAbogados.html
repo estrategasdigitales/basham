@@ -1,0 +1,52 @@
+<table style="border-collapse: collapse; table-layout: fixed;" border="0" cellspacing="0" cellpadding="1" width="100%">
+    <input type="hidden" id="numeroAbogados" name="numeroAbogados" value="{NUMERO_ABOGADOS}">
+    <input type="hidden" id="abogadoSeleccionado" name="abogadoSeleccionado" value="">
+    <input type="hidden" id="numeroSeleccionAbogado" name="numeroSeleccionAbogado" value="">
+    <input type="hidden" id="idPracticaAbogadoSeleccionado" name="idPracticaAbogadoSeleccionado" value="">
+    <input type="hidden" id="idNivelAbogadoSeleccionado" name="idNivelAbogadoSeleccionado" value="">
+    <!-- BEGIN LISTA_ABOGADOS -->
+        <input type="hidden" id="idAbogado_{NUMERO}" name="idAbogado_{NUMERO}" value="{ID_ABOGADO}">
+        <tr style="height: 10px;" valign="top">
+            <td class="{CLASE_DATO}" align="left" width="20.6%" id="nombreAbogadoTd_{NUMERO}">
+                <a id="nombreAbogadoHref_{NUMERO}" href="javascript:;" onclick="seleccionaAbogado('{ID_ABOGADO}','{NUMERO}','{ID_PRACTICA}','{ID_NIVEL}')" class="dato">
+                    <div id="nombreAbogadoLista_{NUMERO}" style="width: 100%; height: 100%;" class="{CLASE_DATO}">
+                        {NOMBRE_ABOGADO_LISTA}
+                    </div>
+                </a>
+            </td>
+            <td class="{CLASE_DATO}" align="left" width="20.6%" id="apPaternoAbogadoTd_{NUMERO}">
+                <a id="apPaternoAbogadoHref_{NUMERO}" href="javascript:;" onclick="seleccionaAbogado('{ID_ABOGADO}','{NUMERO}','{ID_PRACTICA}','{ID_NIVEL}')" class="dato">
+                    <div id="apPaternoAbogadoLista_{NUMERO}" style="width: 100%; height: 100%;" class="{CLASE_DATO}">
+                        {AP_PATERNO_ABOGADO_LISTA}
+                    </div>
+                </a>
+            </td>
+            <td class="{CLASE_DATO}" align="left" width="20.5%" id="apMaternoAbogadoTd_{NUMERO}">
+                <a id="apMaternoAbogadoHref_{NUMERO}" href="javascript:;" onclick="seleccionaAbogado('{ID_ABOGADO}','{NUMERO}','{ID_PRACTICA}','{ID_NIVEL}')" class="dato">
+                    <div id="apMaternoAbogadoLista_{NUMERO}" style="width: 100%; height: 100%;" class="{CLASE_DATO}">
+                        {AP_MATERNO_ABOGADO_LISTA}
+                    </div>
+                </a>
+            </td>
+            <td class="{CLASE_DATO}" align="left" width="20.5%" id="nivelAbogadoTd_{NUMERO}">
+                <a id="nivelAbogadoHref_{NUMERO}" href="javascript:;" onclick="seleccionaAbogado('{ID_ABOGADO}','{NUMERO}','{ID_PRACTICA}','{ID_NIVEL}')" class="dato">
+                    <div id="nivelAbogadoLista_{NUMERO}" style="width: 100%; height: 100%;" class="{CLASE_DATO}">
+                        {NIVEL_ABOGADO_LISTA}
+                    </div>
+                </a>
+            </td>
+            <td class="{CLASE_DATO}" align="left" id="practicaAbogadoTd_{NUMERO}">
+                <a id="practicaAbogadoHref_{NUMERO}" href="javascript:;" onclick="seleccionaAbogado('{ID_ABOGADO}','{NUMERO}','{ID_PRACTICA}','{ID_NIVEL}')" class="dato">
+                    <div id="practicaAbogadoLista_{NUMERO}" style="width: 100%; height: 100%;" class="{CLASE_DATO}">
+                        {PRACTICA_ABOGADO_LISTA}
+                    </div>
+                </a>
+            </td>
+        </tr>
+    <!-- END LISTA_ABOGADOS -->
+    <tr>
+        <td colspan="5">
+            &nbsp;
+        </td>
+    </tr>
+</table>

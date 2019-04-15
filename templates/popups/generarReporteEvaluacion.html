@@ -1,0 +1,31 @@
+<div id="generarReporteEvaluacion" class="reveal-modal medium" style="top:10% !important; left:50% !important; height: 165px;">
+    <form name="formReporteEvaluacion" action="" onsubmit="return false;">
+        <table class="formatoTabla" style="border-collapse: collapse; table-layout: fixed;" border="0" cellspacing="0" cellpadding="4" width="100%">
+            <tr>
+                <td>
+                    <b class="tituloReveal">Reporte de &Uacute;ltima Evaluaci&oacute;n</b><br>
+                    <hr class="plecaReveal">
+                </td>
+            </tr>
+            <tr>
+                <td class="datoPrincipal" align="left">
+                    Abogado seleccionado: <b><span id="nombreAbogadoReporte"></span></b>
+                </td>
+            </tr>
+            <tr>
+                <td class="datoPrincipal">
+                    &iquest;Desea obtener el &uacute;ltimo reporte de evaluaci&oacute;n del abogado seleccionado?
+                </td>
+            </tr>
+        </table>
+        <div style="left: 48%; width: 43%; position: absolute; top: 85%;">
+            <button type="button" style="width: 100px;" onclick="validaReportes(document.formReporteEvaluacion, 'Evaluacion')" id="btnOkGenerarReporteEvaluacion">
+                OK
+            </button>
+            <button type="button" style="width: 100px;" onclick="cerrarReveal('generarReporteEvaluacion')">
+                Cancelar
+            </button>
+        </div>
+    </form>
+	<iframe id="myExcelframe" style="display:none" width="1" height="1"></iframe>
+</div>
