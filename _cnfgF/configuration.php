@@ -6,9 +6,9 @@
 		$host = "localhost";
 		
 		
-		$user = "";
-		$pass = "";
-		$db = ""; 
+		$user = "basham";
+		$pass = "CN5WPamKTLhpi2lj";
+		$db = "basham"; 
 		
 		
 		$link = mysql_connect($host, $user, $pass) or die('Could not connect: ' . mysql_error());
